@@ -12,7 +12,6 @@ spec:
     path: dev
   destination:
     server: argocd
-    path: https://kubernetes.default.svc/
     namespace: myapp 
 
   syncPolicy:
@@ -20,5 +19,5 @@ spec:
     - CreateNamespace=true
 
     automated:
-      selfheal: true
+      selfHeal: true
       prune: true  # prune deletes resources that are not in the source repo
